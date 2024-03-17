@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Summary</title>
+    <link rel="stylesheet" href="content.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <img src="./go.svg" width="64" height="64" alt="Google Meet">
+                <h1>Meeting Summary</h1>
+            </div>
+            <div class="header-bottom">
+                <!-- <span class="avatar">AC</span> -->
+                <div class="info">
+                    <h2>Awesome Creative Team</h2>
+                    <p>Organized by SVVVIANS</p>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="section">
+                <h3>Design Review</h3>
+                <p>A review of the new design concepts for our upcoming project. We'll discuss the color palette, typography, and overall user experience.</p>
+                <h3>Summary:</h3>
+                <ul id="summaryList"></ul>
+            </div>
+            <div class="section">
+                <h3>Participants</h3>
+                <div class="participant">Mayank</div>
+                <div class="participant">Birla</div>
+                <div class="participant">mohit</div>
+            </div>
+            <div class="section">
+                <h3>Date & Time</h3>
+                <p>March 17, 2024, 10:00 AM</p>
+            </div>
+        </main>
+        <footer>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const summaryData = [
+                "User1 initiates the meeting and welcomes participants.",
+                "User2 and User3 express their gratitude for being invited.",
+                "User1 introduces the agenda for the meeting.",
+                "User2 proposes to add an item to review the progress of the marketing campaign.",
+                "User3 acknowledges the suggestion."
+            ];
+
+            const summaryList = document.getElementById("summaryList");
+            summaryData.forEach(item => {
+                const li = document.createElement("li");
+                li.textContent = item;
+                summaryList.appendChild(li);
+            });
+        });
+    </script>
+</body>
+</html>
